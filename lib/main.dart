@@ -1,15 +1,3 @@
-import 'package:aether_drive_flutter/Utils/Constants/icons/aether_full_icon.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/album.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/album_active.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/document.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/file.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/folder.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/gallery.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/gallery_active.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/setting.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/setting_active.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/storage.dart';
-import 'package:aether_drive_flutter/Utils/Constants/icons/storage_active.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,13 +14,13 @@ class MyApp extends StatelessWidget {
       title: 'Aether Drive',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        // fontFamily: 'Lato',
+        fontFamily: 'Poppins',
       ),
       home: Scaffold(
         body: SizedBox(
           child: Center(
             child: Text("Hello,\nDereck Doyle 👋",
-                style: GoogleFonts.lato(
+                style: GoogleFonts.poppins(
                     color: Colors.black,
                     fontSize: 40,
                     fontWeight: FontWeight.bold)),
