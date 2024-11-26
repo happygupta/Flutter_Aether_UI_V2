@@ -30,16 +30,19 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Center(
-                      child: Text('END TO END ENCRYPTION ',
-                        style:TextStyle(
-                            fontSize: 21
+                    Column(
+                      children: [
+                        Image.asset('assets/images/secure-cloud.png'),
+                        Text('END TO END ENCRYPTION ',
+                          style:TextStyle(
+                              fontSize: 21
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                     Column(
                       children: [
-                        Image.asset('assets/images/slider-background-3-removebg.png',
+                        Image.asset('assets/images/slider-background-3.png',
                         width: double.infinity,),
                         Text('UPLOAD LARGE FILE \n UPTO 50GB',
                           style:TextStyle(
