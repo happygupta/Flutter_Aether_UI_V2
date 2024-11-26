@@ -1,3 +1,4 @@
+import 'package:aether_drive_flutter/src/Screens/Splash/splash_screen.dart';
 import 'package:aether_drive_flutter/src/Utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,25 +25,27 @@ class MyApp extends StatelessWidget {
     MaterialTheme theme = MaterialTheme(textTheme);
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Aether Drive',
       theme: brightness == Brightness.light ? theme.light() : theme.dark(),
-      home: Scaffold(
-        body: SizedBox(
-          child: Center(
-            child: Text(
-              "Hello,\nDereck Doyle 👋",
-              style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                    fontWeight: FontWeight.w700,
-                    color: Theme.of(context).colorScheme.tertiary,
-                  ),
-            ),
-            // child: CustomPaint(
-            //   painter: StorageActiveIcon(),
-            //   size: Size(90, 90),
-            // ),
-          ),
-        ),
-      ),
+      home: SplashScreen(),
+      // home: Scaffold(
+      //   body: SizedBox(
+      //     child: Center(
+      //       child: Text(
+      //         "Hello,\nDereck Doyle 👋",
+      //         style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+      //               fontWeight: FontWeight.w700,
+      //               color: Theme.of(context).colorScheme.tertiary,
+      //             ),
+      //       ),
+      //       // child: CustomPaint(
+      //       //   painter: StorageActiveIcon(),
+      //       //   size: Size(90, 90),
+      //       // ),
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
