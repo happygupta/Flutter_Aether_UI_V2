@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:aether_drive_flutter/src/Screens/Landing/landing_page.dart';
-import 'package:aether_drive_flutter/src/Screens/Slider%20Pages/slider_login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
