@@ -14,24 +14,30 @@ class _LandingPGState extends State<LandingPG> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xff004ca8),
+        backgroundColor: Color(0xffffffff),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+            Padding(
+              padding: const EdgeInsets.only(top:15),
+              child: Image.asset('assets/images/image.png'),
+            ),
+            Stack(
+              alignment: Alignment.center,
               children: [
-                Image.asset(
-                  'assets/images/Group 10.png',
-                  scale: 3,
+                Padding(
+                  padding: const EdgeInsets.only(right: 20, ),
+                  child: Image.asset(
+                    'assets/images/Group_10__2_-removebg-preview.png',
+                    scale: 1.2,
+                    color:  Color(0xff004ca8),
+                  ),
                 ),
-                Text(
-                  'ether',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'nunito',
-                      fontSize: 35),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30,right: 8),
+                  child: Image.asset(
+                    'assets/images/memoji.png',
+                  ),
                 ),
               ],
             ),
@@ -47,38 +53,43 @@ class _LandingPGState extends State<LandingPG> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      'Welcome to Aether Drive Your personal cloud storage solution!',
-                      style: TextStyle(
-                          color: Color(0xff004ca8),
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'nunito',
-                          fontSize: 17),
+                    FittedBox(
+                      child: Text(
+                        'Welcome to Aether Drive Your personal cloud storage solution!',
+                        style: TextStyle(
+                            color: Color(0xff004ca8),
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'nunito',
+                            fontSize: 17),
+                      ),
                     ),
                     Container(
                         height: MediaQuery.of(context).size.height * 0.04),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width*0.3,
-                      height: MediaQuery.of(context).size.height*0.05,
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      height: MediaQuery.of(context).size.height * 0.05,
                       child: ElevatedButton(
                           style: ButtonStyle(
                               backgroundColor: WidgetStatePropertyAll(
                                 Color(0xff005ac4),
                               ),
                               elevation: WidgetStatePropertyAll(20),
-                              shadowColor: WidgetStatePropertyAll(Colors.black)),
+                              shadowColor:
+                                  WidgetStatePropertyAll(Colors.black)),
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => SliderPG()));
                           },
-                          child: Text(
-                            'Get Started',
-                            style: TextStyle(
-                                color: Color(0xffffffff),
-                                fontFamily: 'nunito',
-                                fontSize: 20),
+                          child: FittedBox(
+                            child: Text(
+                              'Get Started',
+                              style: TextStyle(
+                                  color: Color(0xffffffff),
+                                  fontFamily: 'nunito',
+                                  fontSize: 20),
+                            ),
                           )),
                     )
                   ],

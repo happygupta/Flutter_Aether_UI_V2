@@ -67,6 +67,7 @@ class _SliderPGState extends State<SliderPG> {
                 showNextButton: false,
                 showSkipButton: false,
                 autoScrollDuration: 2000,
+                infiniteAutoScroll: true,
                 dotsDecorator: DotsDecorator(
                     color: Color(0xff11346c),
                     size: Size.square(10.0),
@@ -93,14 +94,14 @@ class _SliderPGState extends State<SliderPG> {
                           shadowColor: WidgetStatePropertyAll(Colors.black)),
                       onPressed: () {},
                       child: SizedBox(
-                        width: MediaQuery.of(context).size.width*0.5,
+                        width: MediaQuery.of(context).size.width*0.6,
                         height: MediaQuery.of(context).size.height*0.05,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(right: 7),
-                              child: Icon(Icons.email,color:  Color(0xff004ca8),),
+                              child: Icon(Icons.email,color:  Color(0xff004ca8),size: 20,),
                             ),
                           Text(
                           'Continue with Email',
@@ -108,19 +109,21 @@ class _SliderPGState extends State<SliderPG> {
                               color:  Color(0xff004ca8),
                               fontWeight: FontWeight.bold,
                               fontFamily: 'nunito',
-                              fontSize: 20),
-                        )
+                              fontSize: 17),
+                                                  )
                           ],
                         ),
                       )
                   ),
                   Container(height: MediaQuery.of(context).size.height * 0.05),
-                  Text(
-                    "By continuing you agree Aether Drive's Terms of Services & Privacy Policy ",
-                    style: TextStyle(
-                        color: Color(0xffffffff),
-                        fontFamily: 'Poppins',
-                        fontSize: 10),
+                  FittedBox(
+                    child: Text(
+                      "By continuing you agree Aether Drive's Terms of Services & Privacy Policy ",
+                      style: TextStyle(
+                          color: Color(0xffffffff),
+                          fontFamily: 'Poppins',
+                          fontSize: 10),
+                    ),
                   ),
                 ],
               ),
